@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+
+	<!-- INJECTING THE LITERAL VALUES USING SETTER METHOD -->
+
+	<!-- <bean id="student" class ="com.spring.di.Student" > <property name="studentName" 
+		value="Prathap"></property> <property name="id" value="1300"></property> 
+		</bean> <bean id="teacher" class ="com.spring.di.Student" > <property name="studentName" 
+		value="vijay"></property> <property name="id" value="1028"></property> </bean> -->
+
+	<!-- INJECTING THE LITERAL VALUES USING CONSTRUCTOR -->
+
+	<bean id="student" class="com.spring.di.Student" autowire="byType">
+		<constructor-arg name="studentName" value="vincent"></constructor-arg>
+		<constructor-arg name="id" value="300" type="int"></constructor-arg>
+	</bean>
+
+
+</beans>
